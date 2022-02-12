@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Setting the main title-->
+	<title>Portfolio  | Neel Bansal</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	
+	<!--Linking Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+	
+	<!--Linking External CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	
+	<!--Linking Interal/Local CSS-->
+	<link rel="stylesheet" href="css/social-icons.css">
+	<link rel="stylesheet" href="css/mouse.css">
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+
+	<!--Linking External JavaScript-->	
+	<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<!--Linking Interal JavaScript-->
+	<script src="js/classTextSetter.js"></script>
+	<script src="script.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+</head>
+<body>
+	<!--Other-->
+	<!--Creating a Custom Cursor-->
+	<div class="custom__cursor__outer">
+	</div>
+	<div class="custom__cursor__inner">
+	</div>
+
+	<!--Section class section 1-->
+	<section class="s1">
+		<!--Main Container-->
+		<div class="main-container">
+			<!--Setting the greeting with my name-->
+			<div class="greeting-wrapper">
+				<h1 id="mainTitle" class="">Hi, I'm Neel Bansal</h1>
+			</div>
+			<!--Creating the Introduction Wrapper-->
+			<div class="intro-wrapper">
+				<!--Creating the navigation wrapper-->
+				<div class="nav-wrapper">
+					<!-- Link around dots-wrapper added after tutorial video -->
+					<a href="index.html">
+						<!--Dots wrapper-->
+						<div class="dots-wrapper">
+							<!--Creating the google dots, list-->
+							<div id="dot-1" class="browser-dot"></div>
+							<div id="dot-2" class="browser-dot"></div>
+							<div id="dot-3" class="browser-dot"></div>
+						</div>
+					</a>
+					<!--The Navigation bar, made a list so that more can be added-->
+					<ul id="navigation">
+						<li><a href="index.html#contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<!--Creating the left column side-->
+				<div class="left-column">
+					<img id="profile_pic" src="images/logo.jpg">
+					<!--Creating the choose a theme title-->
+					<h5 id="personalizeTheme" style="text-align: center;line-height: 0;">Personalize Theme</h5>
+					<!--Creating the buttons for each color theme picker, different modes-->
+					<div id="theme-options-wrapper">
+						<div data-mode="light" id="light-mode" class="theme-dot"></div>
+						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+						<div data-mode="green" id="green-mode" class="theme-dot"></div>
+						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+					</div>
+					<!--Creating the note for theme settings-->
+					<p id="settings-note">*Theme settings will be saved while<br>the website is open!<br></p>
+				</div>
+
+				<!--Creating the right column side-->
+				<div class="right-column">
+					<div id="preview-shadow">
+						<div id="preview">
+							<!--Corner top left, corner top right-->
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<!--Implementing text into the note-->
+							<h3 id="whatIdo">What I Do</h3>
+							<p id="whatIdoText">I am current studying in school, and learning a few programming languages.</p>
+							<!--Corner bottom left, corner bottom right-->
+							<div id="corner-br" class="corner"></div>
+							<div id="corner-bl" class="corner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Creating a Section 2-->
+	<section class="s2">
+		<div class="main-container">
+
+			<div class="about-wrapper">
+				<div class="about-me" id="about-me">
+					<h4 id="moreAboutMe">MORE ABOUT ME</h4>
+
+					<p id="moreAboutMeText">I enjoy taking on new projects that will challenge me, as well as learning new skills and broadening my knowledge on programming.
+					<br><br>
+					Aside from learning HTML, CSS and JavaScript. I am learning Python. The sphere on the right or bottom, contain all the languages I am currently interested in learning.</p>
+					<hr>
+					<h4 id="topExpertise">TOP EXPERTISE</h4>
+
+					<p id="primaryFocus">Primary Focus: Python | <a target="_blank" href="resume.pdf">Download Resume</a></p>
+
+					<div id="skills">
+						<ul>
+							<li>Python</li>
+							<li>JavaScript</li>
+						</ul>
+
+						<ul>
+							<li>Heroku</li>
+							<li>HTML/CSS</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				
+				<div class="social-links">
+					<span class="Sphere"></span>
+					
+
+					<script>
+						const Texts = [
+							'HTML', 'CSS', 'JAVASCRIPT',
+							'RUBY', 'REACT.JS',
+							'PYTHON', 'TKINTER',
+							'URSINA', 'NODE.JS', 'PHP',
+							'C#', 'C', 'JQUERY', 'JAVA'
+						];
+						//console.log(230)
+						let calcRadius = 230 
+						if(screen.availWidth<500){
+							calcRadius=screen.availWidth/2.1;
+						}else{
+							calcRadius=230
+						};
+
+						var tagCloud = TagCloud('.Sphere', Texts, {
+							// Sphere radius in px
+							radius: calcRadius,
+				
+							// animation speed
+							// slow, normal, fast
+							maxSpeed: 'normal',
+							initSpeed: 'fast',
+				
+							// Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+							direction: 135,
+				
+							// interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+							keep: true
+				
+						});
+				
+						// Giving color to each text in sphere
+						var color = '#FF5733 ';
+						document.querySelector('.Sphere').style.color = color;
+					</script>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!--Creating a Section 1 (3)-->
+	<section class="s1">
+		<div class="main-container">
+			<h3 id="myProjects" style="text-align: center;">My Projects</h3>
+
+			<div class="post-wrapper" id="post-wrapper">
+				<div>
+					<div class="post" id="post-1">
+						<img class="thumbnail" src="images/index-project-icons/User_Interface.png">
+						<div class="post-preview">
+							<h6 class="post-title">UI Designs</h6>
+							<p class="post-intro">I've started creating prototype UI's for fun, these are mainly mobile app designs</p>
+							<a href="projects.html">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post" id="post-2">
+						<img class="thumbnail" src="">
+						<div class="post-preview">
+							<h6 class="post-title">N/A</h6>
+							<p class="post-intro">N/A</p>
+							<a href="404.html">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post" id="post-3">
+						<img class="thumbnail" src="">
+						<div class="post-preview">
+							<h6 class="post-title">N/A</h6>
+							<p class="post-intro">N/A</p>
+							<a href="404.html">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<center><p>Please make sure to check out the image <a href="html/credits.html">Credits Page.</a></p></center>
+	</section>
+
+	<!--Creating a Section 2 (4)-->
+	<script type="text/javascript">var submitted=false;</script>
+	<section class="s2">
+		<a name="contact"></a>
+		<div class="main-container">
+			<a href=""></a>
+			<h3 id="getInTouch" style="text-align: center;">Get In Touch</h3>
+			<!--/viewform?usp=pp_url&entry.2005620554=garbageName&entry.1045781291=garbageEmail&entry.1065046570=garbageSubject&entry.839337160=garbageComments-->
+			<form id="gform" name="gform" enctype="text/plain" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSeSoz9ga8LoC04tM_6bv1-Wzx5t0iMgmU5XjCm4FTzTeNXZRA/formResponse?">
+
+				<label>Name</label>
+				<input name="entry.2005620554" id="entry.2005620554" class="input-field" type="text" name="name" placeholder="Your Name...">
+
+				<label>Email</label>
+				<input name="entry.1045781291" id="entry.1045781291" class="input-field" type="text" name="email" placeholder="Your Email...">
+
+				<label>Subject</label>
+				<input name="entry.1065046570" id="entry.1065046570" class="input-field" type="text" name="subject" placeholder="The Subject...">
+
+				<label>Message</label>
+				<textarea name="entry.839337160" id="entry.839337160" class="input-field" name="message" placeholder="Message..."></textarea>
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+			<!--Social Media Wrapper & Icons-->
+			<div class="social-wrapper" id="socialWrapper">
+				<a target="_blank" id="twitterIcon" href="https://www.twitter.com/" class="fa fa-twitter"></a>
+				<a target="_blank" id="facebookIcon" href="https://www.facebook.com/profile.php?id=100074526084996" class="fa fa-facebook"></a>
+				<a target="_blank" id="instagramIcon" href="https://www.instagram.com/_neel_bansal_/" class="fa fa-instagram"></a>
+			</div>
+					<br>
+		</div>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        <script>    
+		//This is a function that validates an email
+            function validateEmail(email){
+              var re = /\S+@\S+\.\S+/;
+              return re.test(email);
+            }
+            //This is a function that submits the form
+          $('#gform').on('submit', function(e) {
+            if(validateEmail(document.getElementById('entry.1045781291').value) == false){
+              //If the email is not valid, then we display an error message
+              alert("Please enter a valid email address");
+            }else if(document.getElementById('entry.2005620554').value && document.getElementById('entry.1045781291').value && document.getElementById('entry.1065046570').value && document.getElementById('entry.839337160').value){
+            //If it satisfies the requirements then it is submitted
+            $('#gform *').fadeOut();
+            $('#gform').prepend('Your submission has been processed...').css("font-family", "monospace").css('color', 'black').css('text-align','center');
+            }else{
+            //This function denies to submit the form if any of the fields are empty
+            alert("Please fill in all the fields!"); 
+          };});
+          </script>
+	</section> 
+	<div class="footer">
+		<footer-text>Copyright @ Neel Bansal 2021-2022. <a href="html/credits.html">Credits Page.</a></footer-text>
+	</div>
+
+
+</body>
+</html>

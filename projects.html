@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Linking CSS Stylesheets-->
+      <!--Linking Javascript-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="js/vanilla-tilt.js"></script>
+      <link rel="stylesheet" href="css/projects.css">
+
+	<!--Linking External JavaScript-->	
+	<!--<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    -->
+
+	<!--Linking Interal JavaScript-->
+	<script src="js/classTextSetter.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/mouse.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+
+  </head>
+  <body>
+    <!--Creating a Custom Cursor-->
+    <div class="custom__cursor__outer">
+	</div>
+	<div class="custom__cursor__inner">
+	</div>
+    
+    <div class="nav-wrapper">
+
+		<!-- Link around dots-wrapper added after tutorial video -->
+		<a href="index.html">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a href="index.html#contact">Contact</a></li>
+
+		</ul>
+	</div>
+    
+    <title>3D Projects</title>
+    <!--Displaying this in the showcase bar-->
+    <section class="showcase">
+        <header class="logo">
+          <br><br>
+    </header>
+    <div class="container">
+        <!--Creating each project showcase-->
+        <div class="box">
+            <h2 class="name">Instagram UI Clone</h2>
+            <a href="images/projects/slideshow/Instagram Clone.png"class="popupimage">Closer Look</a>
+            <div class="circle"></div>
+            <img width="100" height="190" src="images/projects/main-icons/instagram_clone.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Travel Agent UI</h2>
+            <a href="images/projects/slideshow/TravelAgent.png"class="popupimage">Closer Look</a>
+            <div class="circle"></div>
+            <img width="100" height="190" src="images/projects/main-icons/travel-guide.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Banking Account UI</h2>
+            <a href="images/projects/slideshow/BankingApp.png"class="popupimage">Closer Look</a>
+            <div class="circle"></div>
+            <img width="100" height="190" src="images/projects/main-icons/banking-app.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Music App UI</h2>
+            <a href="images/projects/slideshow/MusicApp.png"class="popupimage">Closer Look</a>
+            <div class="circle"></div>
+            <img width="100" height="190" src="images/projects/main-icons/music-app.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Simple JS Calculation</h2>
+            <a target="_blank" href="https://npx2218.github.io/Simple-JS-Calculator/" class="buy">Closer Look</a>
+            <div class="circle"></div>
+            <img width="200" height="190" src="images/projects/main-icons/simple-calc.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Simple JS Stopwatch</h2>
+            <a target="_blank" href="https://npx2218.github.io/Simple-JS-Stopwatch/" class="buy">Closer Look</a>
+            <div class="circle"></div>
+            <img width="100" height="190" src="images/projects/main-icons/simple-stopwatch.png" class="product">
+        </div>
+        <div class="box">
+            <h2 style="font-size: 21px;" class="name">Password Strength Checker</h2>
+            <a target="_blank" href="https://npx2218.github.io/Password-Strength-Checker/" class="buy">Closer Look</a>
+            <div class="circle"></div>
+            <img width="100" height="190" src="images/projects/main-icons/password-strength.png" class="product">
+        </div>
+    </div>
+    <!--<script type="text/javascript" src="js/popup-image.js"></script>
+    <div class="animated-text">
+        <div class="line">Copyright</div>
+        <div class="line">Belongs</div>
+        <div class="line">To Respective</div>
+        <div class="line">Owners</div>
+    </div>-->
+    <br><br>
+    <script>
+        $(document).ready(function(){
+            $('.popupimage').esgi();
+        });
+    </script>
+    <script>
+    console.log("done");
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+        max: 25,
+        speed: 400
+	});
+    console.log('after')
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

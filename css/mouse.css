@@ -1,0 +1,29 @@
+* {
+  cursor: none;
+}
+
+.custom__cursor__inner {
+  height: 7.5px;
+  width: 7.5px;
+  position: fixed;
+  transform: translate(0px, 0px);
+  background-color: #f7d883;
+  border-radius: 50%;
+  transition: height 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96),
+    width 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  z-index: 5000;
+  pointer-events: none;
+}
+
+.custom__cursor__outer {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #0f1928;
+  background-color: transparent;
+  position: fixed;
+  z-index: 5000;
+  transform: translate(0px, 0px);
+  pointer-events: none;
+  opacity: 0.4;
+}

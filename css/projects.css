@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  cursor: none;
+}
+
+body {
+  background-color: var(--mainColor);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  /*background: #232323;*/
+  background: var(--borderColor);
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.container .box::before {
+  content: "NEEL";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 6em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+}
+
+.container .box::after {
+  content: "BANSAL";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 4em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+  opacity: 0.04;
+}
+
+.container .box .name {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: var(--mainText);
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.container .box:hover .name {
+  top: 40px;
+  opacity: 1;
+}
+
+.container .box .buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.container .box:hover .buy {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.container .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #fff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 50px);
+}
+
+.container .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transition: 0.5s;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px) rotate(-15deg);
+}
+.container .box:hover .product {
+  transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+/*Changing the colors for each product*/
+.container .box:nth-child(1) .circle,
+.container .box:nth-child(1) .buy {
+  background: linear-gradient(to bottom right, #4b52ba, #cb4d89);
+}
+
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy {
+  background: linear-gradient(to bottom right, #1ea3dc, #ade65b);
+}
+
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy {
+  background: linear-gradient(to bottom right, #e8e9e9, rgb(29, 29, 29));
+}
+
+.container .box:nth-child(4) .circle,
+.container .box:nth-child(4) .buy {
+  background: linear-gradient(to bottom right, #c4c4c4, #ff5b5b);
+}
+
+.container .box:nth-child(5) .circle,
+.container .box:nth-child(5) .buy {
+  background: linear-gradient(to bottom right, #fb0066, #64278f);
+}
+
+.container .box:nth-child(6) .circle,
+.container .box:nth-child(6) .buy {
+  background: linear-gradient(to bottom right, #ffa608, white);
+}
+
+.container .box:nth-child(7) .circle,
+.container .box:nth-child(7) .buy {
+  background: linear-gradient(to bottom right, #ac92eb, white);
+}
+
+.nav-wrapper {
+  border-radius: 5px 5px 0 0;
+  grid-area: nav-wrapper;
+  border-bottom: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Setting the background color of the 
+  navigation-wrapper*/
+  background-color: var(--mainColor);
+}
+/*Dots wrapper class, contains dot-1,
+dot-2, dot-3*/
+.dots-wrapper {
+  display: flex;
+  padding: 10px;
+}
+
+/*Setting each dots color*/
+#dot-1 {
+  background-color: #fc6058;
+}
+
+#dot-2 {
+  background-color: #fec02f;
+}
+
+#dot-3 {
+  background-color: #2aca3e;
+}
+
+/*Creating each of the dots and rounding
+their corners*/
+.browser-dot {
+  background-color: black;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 5px;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+/*Navigation wrapper*/
+.nav-wrapper {
+  border-radius: 5px 5px 0 0;
+  grid-area: nav-wrapper;
+  border-bottom: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Setting the background color of the 
+  navigation-wrapper*/
+  background-color: var(--mainColor);
+}
+
+#navigation a {
+  color: var(--mainText);
+}
+
+/*Adding some space from the right*/
+#navigation {
+  margin: 0;
+  padding: 10px;
+}
+
+/*Inline the elements and adding space
+between each link*/
+#navigation li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.box a {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  z-index: 10;
+  opacity: 0;
+}
+
+.container .box:hover a {
+  bottom: 30px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.animated-text {
+  color: #fff;
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2980b9;
+  padding: 0 40px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.line {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.line:first-child {
+  animation: anim 12s infinite;
+}
+
+@keyframes anim {
+  0% {
+    margin-top: 0;
+  }
+  16% {
+    margin-top: -60px;
+  }
+  33% {
+    margin-top: -120px;
+  }
+  50% {
+    margin-top: -180px;
+  }
+  66% {
+    margin-top: -120px;
+  }
+  82% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
