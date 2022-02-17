@@ -1,3 +1,6 @@
+/*     Importing Google fonts    */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 /*Creating global variables, for colors
 this can be used for any thing*/
 :root {
@@ -104,6 +107,7 @@ textarea {
 }
 
 a {
+  font-family: "Roboto Mono", monospace;
   text-decoration: none;
   color: #17a2b8;
 }
@@ -316,6 +320,10 @@ column, and adding padding*/
   background-color: #7e4c74;
 }
 
+#dark-mode {
+  background-color: #1d1d1d;
+}
+
 #settings-note {
   font-size: 12px;
   font-style: italic;
@@ -488,6 +496,7 @@ textarea {
   resize: none;
 }
 
+/*Creating the submit button for the google forms*/
 #submit-btn {
   margin-top: 10px;
   width: 100%;
@@ -496,6 +505,18 @@ textarea {
   color: #fff;
   background-color: var(--buttonColor);
   border: none;
+  border-radius: 5px;
+}
+
+#submit-btn:hover {
+  transition: 1s;
+  background-color: var(--secondaryText);
+}
+
+#submit-btn:not(:hover) {
+  transition: 1s;
+  color: #fff;
+  background-color: var(--buttonColor);
 }
 
 /*Modifying it for mobile*/
@@ -547,9 +568,6 @@ textarea {
 #whatIdoText {
   padding-left: 10px;
 }
-/*     Importing Google fonts    */
-/*     Importing Google fonts    */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 /* Applying CSS to sphere */
 .tagcloud {
@@ -584,4 +602,14 @@ footer-text {
   font-family: "Roboto Mono", monospace;
   font-weight: 100;
   color: var(--mainText);
+}
+
+::-moz-selection {
+  background-color: var(--borderColor);
+  color: #ffffff;
+}
+
+::selection {
+  background-color: var(--borderColor);
+  color: #ffffff;
 }

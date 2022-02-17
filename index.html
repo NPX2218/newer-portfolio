@@ -10,16 +10,22 @@
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 	
-	<!--Linking External CSS-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	
-	<!--Linking Interal/Local CSS-->
+	<!--Linking Internal/Local CSS-->
 	<link rel="stylesheet" href="css/social-icons.css">
 	<link rel="stylesheet" href="css/mouse.css">
 	<link rel="stylesheet" type="text/css" href="default.css">
 	<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+
+	<!--Linking External CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	
+    <!--Linking Internal/Local Javascript-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/textSetters/indexTextSetter.js"></script>
+	<script src="script.js"></script>
 
 	<!--Linking External JavaScript-->	
 	<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
@@ -27,14 +33,10 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-	<!--Linking Interal JavaScript-->
-	<script src="js/classTextSetter.js"></script>
-	<script src="script.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
-
+	
 </head>
 <body>
-	<!--Other-->
+
 	<!--Creating a Custom Cursor-->
 	<div class="custom__cursor__outer">
 	</div>
@@ -53,12 +55,12 @@
 			<div class="intro-wrapper">
 				<!--Creating the navigation wrapper-->
 				<div class="nav-wrapper">
-					<!-- Link around dots-wrapper added after tutorial video -->
+					<!--Links that lead to different webpages-->
 					<a href="index.html">
 						<!--Dots wrapper-->
 						<div class="dots-wrapper">
-							<!--Creating the google dots, list-->
-							<div id="dot-1" class="browser-dot"></div>
+							<!--Creating the red, green and yellow dots, list-->
+							<div onclick="javascript:window.close();opener.window.focus();" id="dot-1" class="browser-dot"></div>
 							<div id="dot-2" class="browser-dot"></div>
 							<div id="dot-3" class="browser-dot"></div>
 						</div>
@@ -80,6 +82,7 @@
 						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
 						<div data-mode="green" id="green-mode" class="theme-dot"></div>
 						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+						<div data-mode="dark" id="dark-mode" class="theme-dot"></div>
 					</div>
 					<!--Creating the note for theme settings-->
 					<p id="settings-note">*Theme settings will be saved while<br>the website is open!<br></p>
@@ -108,9 +111,10 @@
 	<!--Creating a Section 2-->
 	<section class="s2">
 		<div class="main-container">
-
+			<!--Creating the about me wrapper-->
 			<div class="about-wrapper">
 				<div class="about-me" id="about-me">
+					<!--More about me text-->
 					<h4 id="moreAboutMe">MORE ABOUT ME</h4>
 
 					<p id="moreAboutMeText">I enjoy taking on new projects that will challenge me, as well as learning new skills and broadening my knowledge on programming.
@@ -119,8 +123,9 @@
 					<hr>
 					<h4 id="topExpertise">TOP EXPERTISE</h4>
 
-					<p id="primaryFocus">Primary Focus: Python | <a target="_blank" href="resume.pdf">Download Resume</a></p>
+					<p id="primaryFocus">Primary Focus: Python | <a href="404.html">Download Resume</a></p>
 
+					<!--Skils list-->
 					<div id="skills">
 						<ul>
 							<li>Python</li>
@@ -135,13 +140,11 @@
 					</div>
 
 				</div>
-
-				
+				<!--Creating the Programming Languages Sphere-->
 				<div class="social-links">
 					<span class="Sphere"></span>
-					
-
 					<script>
+						//The languages in an array
 						const Texts = [
 							'HTML', 'CSS', 'JAVASCRIPT',
 							'RUBY', 'REACT.JS',
@@ -149,14 +152,15 @@
 							'URSINA', 'NODE.JS', 'PHP',
 							'C#', 'C', 'JQUERY', 'JAVA'
 						];
-						//console.log(230)
+
+						//Setting the radius of the ball
 						let calcRadius = 230 
 						if(screen.availWidth<500){
-							calcRadius=screen.availWidth/2.1;
+							calcRadius=screen.availWidth/2.1
 						}else{
 							calcRadius=230
 						};
-
+						//Creating the main ball with the help of the sphere class
 						var tagCloud = TagCloud('.Sphere', Texts, {
 							// Sphere radius in px
 							radius: calcRadius,
@@ -171,17 +175,14 @@
 				
 							// interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
 							keep: true
-				
 						});
 				
 						// Giving color to each text in sphere
 						var color = '#FF5733 ';
 						document.querySelector('.Sphere').style.color = color;
 					</script>
-
 				</div>
 			</div>
-
 		</div>
 	</section>
 
@@ -189,8 +190,9 @@
 	<section class="s1">
 		<div class="main-container">
 			<h3 id="myProjects" style="text-align: center;">My Projects</h3>
-
+			<!--Creating the projects wrapper-->
 			<div class="post-wrapper" id="post-wrapper">
+				<!--Post 1-->
 				<div>
 					<div class="post" id="post-1">
 						<img class="thumbnail" src="images/index-project-icons/User_Interface.png">
@@ -202,6 +204,7 @@
 					</div>
 				</div>
 
+				<!--Post 2
 				<div>
 					<div class="post" id="post-2">
 						<img class="thumbnail" src="">
@@ -225,7 +228,11 @@
 				</div>
 			</div>
 		</div>
-		<center><p>Please make sure to check out the image <a href="html/credits.html">Credits Page.</a></p></center>
+			<center><p>Please make sure to check out the image | <a href="credits.html">Credits Page</a></p></center>
+
+	-->
+
+		<!--Creating the image credit area-->
 	</section>
 
 	<!--Creating a Section 2 (4)-->
@@ -235,7 +242,8 @@
 		<div class="main-container">
 			<a href=""></a>
 			<h3 id="getInTouch" style="text-align: center;">Get In Touch</h3>
-			<!--/viewform?usp=pp_url&entry.2005620554=garbageName&entry.1045781291=garbageEmail&entry.1065046570=garbageSubject&entry.839337160=garbageComments-->
+
+			<!--Creating the Google Form Submitter-->
 			<form id="gform" name="gform" enctype="text/plain" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSeSoz9ga8LoC04tM_6bv1-Wzx5t0iMgmU5XjCm4FTzTeNXZRA/formResponse?">
 
 				<label>Name</label>
@@ -249,8 +257,9 @@
 
 				<label>Message</label>
 				<textarea name="entry.839337160" id="entry.839337160" class="input-field" name="message" placeholder="Message..."></textarea>
-				<input id="submit-btn" type="submit" value="Send">
+				<input id="submit-btn" type="submit" value="Send ✈">
 			</form>
+
 			<!--Social Media Wrapper & Icons-->
 			<div class="social-wrapper" id="socialWrapper">
 				<a target="_blank" id="twitterIcon" href="https://www.twitter.com/" class="fa fa-twitter"></a>
@@ -260,7 +269,9 @@
 					<br>
 		</div>
 		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-        <script>    
+		
+		<!--Script for Google Forms-->
+		<script>    
 		//This is a function that validates an email
             function validateEmail(email){
               var re = /\S+@\S+\.\S+/;
@@ -281,8 +292,10 @@
           };});
           </script>
 	</section> 
+
+	<!--Creating the copyright footer-->
 	<div class="footer">
-		<footer-text>Copyright @ Neel Bansal 2021-2022. <a href="html/credits.html">Credits Page.</a></footer-text>
+		<footer-text>Copyright @ Neel Bansal 2021-2022. <a href="credits.html">Credits Page.</a></footer-text>
 	</div>
 
 

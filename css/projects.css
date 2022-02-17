@@ -138,37 +138,37 @@ body {
 
 /*Changing the colors for each product*/
 .container .box:nth-child(1) .circle,
-.container .box:nth-child(1) .buy {
+.container .box:nth-child(1) a {
   background: linear-gradient(to bottom right, #4b52ba, #cb4d89);
 }
 
 .container .box:nth-child(2) .circle,
-.container .box:nth-child(2) .buy {
+.container .box:nth-child(2) a {
   background: linear-gradient(to bottom right, #1ea3dc, #ade65b);
 }
 
 .container .box:nth-child(3) .circle,
-.container .box:nth-child(3) .buy {
+.container .box:nth-child(3) a {
   background: linear-gradient(to bottom right, #e8e9e9, rgb(29, 29, 29));
 }
 
 .container .box:nth-child(4) .circle,
-.container .box:nth-child(4) .buy {
+.container .box:nth-child(4) a {
   background: linear-gradient(to bottom right, #c4c4c4, #ff5b5b);
 }
 
 .container .box:nth-child(5) .circle,
-.container .box:nth-child(5) .buy {
+.container .box:nth-child(5) a {
   background: linear-gradient(to bottom right, #fb0066, #64278f);
 }
 
 .container .box:nth-child(6) .circle,
-.container .box:nth-child(6) .buy {
+.container .box:nth-child(6) a {
   background: linear-gradient(to bottom right, #ffa608, white);
 }
 
 .container .box:nth-child(7) .circle,
-.container .box:nth-child(7) .buy {
+.container .box:nth-child(7) a {
   background: linear-gradient(to bottom right, #ac92eb, white);
 }
 
@@ -255,7 +255,7 @@ between each link*/
   transform-style: preserve-3d;
   transform: translate3d(-50%, 0, 75px);
   color: #fff;
-  background: #333;
+  background: var(--secondaryText);
   padding: 10px 25px;
   border-radius: 30px;
   text-decoration: none;

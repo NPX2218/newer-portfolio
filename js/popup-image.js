@@ -1,8 +1,4 @@
-/* 
-Author Esgi Dendyanri
-Youtube.com/DyFountain
-Facebook.com/DyFountain
-*/
+
 $(document).ready(function(){
     $.fn.esgi = function(maxwidth) {
 		//if(!maxwidth) maxwidth='1280px';
