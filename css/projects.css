@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: var(--mainColor);
+  background-color: var(--secondaryColor);
 }
 
 .container {
