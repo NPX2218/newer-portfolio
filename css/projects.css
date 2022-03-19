@@ -172,6 +172,11 @@ body {
   background: linear-gradient(to bottom right, #ac92eb, white);
 }
 
+.container .box:nth-child(8) .circle,
+.container .box:nth-child(8) a {
+  background: linear-gradient(to bottom right, #70ffff, white);
+}
+
 .nav-wrapper {
   border-radius: 5px 5px 0 0;
   grid-area: nav-wrapper;
