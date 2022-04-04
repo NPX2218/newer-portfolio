@@ -1,4 +1,3 @@
-/*
 let classValue = "animate__animated animate__fadeInDown";
 
 document.getElementById("mainTitle").className += classValue
@@ -15,7 +14,3 @@ document.getElementById("myProjects").className = classValue;
 document.getElementById("getInTouch").className = classValue; 
 document.getElementById("gform").className = classValue; 
 document.getElementById("navigation").className = classValue;
-
-
-
-*/
