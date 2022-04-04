@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--Setting the main title-->
-	<title>Portfolio  | Neel Bansal</title>
-
+	<!-- Setting the main title -->
+	<title>Portfolio | Neel Bansal</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	
-	<!--Linking Google Fonts-->
-	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+	<!--Linking Internal/Local CSS -->
+	<link rel="stylesheet" href="src/css/mouse.css">
+	<link rel="stylesheet" type="text/css" href="src/css/default.css">
+	<link rel="stylesheet" type="text/css" href="src/css/scrollbar.css">
+	<link rel="stylesheet" id="theme-style" type="text/css" href="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/></head>
 	
-	<!--Linking Internal/Local CSS-->
-	<link rel="stylesheet" href="css/social-icons.css">
-	<link rel="stylesheet" href="css/mouse.css">
-	<link rel="stylesheet" type="text/css" href="default.css">
-	<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
-	<link id="theme-style" rel="stylesheet" type="text/css" href="">
-	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<!-- Adding the Favicon -->
+	<link rel="icon" type="image/png" href="src/images/favicon.png"/>
 
 	<!--Linking External CSS-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+	<!--Linking Internal/Local Javascript-->
+	<script type="text/javascript" src="src/js/jquery.js"></script>
+	<script type="text/javascript" src="src/js/butter.js"></script>
+	<script type="text/javascript" src="src/js/textSetters/indexTextSetter.js" defer></script>
+	<script type="text/javascript" src="src/js/constants.js" defer></script>
+	<script type="text/javascript" src="script.js" defer></script>
 	
-    <!--Linking Internal/Local Javascript-->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script src="js/textSetters/indexTextSetter.js"></script>
-	<script src="script.js"></script>
-	<script src="js/butter.js"></script>
 	
 	<!--Linking External JavaScript-->	
-	<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-	
-
+	<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
 <body>
 
@@ -45,7 +39,7 @@
 	<div class="custom__cursor__inner">
 	</div>
 
- <!--	<div id="butter">
+<!--	<div id="butter">
 		<script>
 			butter.init({
 				wrapperDamper: 1,
@@ -59,14 +53,14 @@
 		<div class="main-container">
 			<!--Setting the greeting with my name-->
 			<div class="greeting-wrapper">
-				<h1 id="mainTitle" class="">Hi, I'm Neel Bansal</h1>
+				<h1 id="mainTitle" class="animate__animated animate__fadeInDown">Hi, I'm Neel Bansal</h1>
 			</div>
 			<!--Creating the Introduction Wrapper-->
 			<div class="intro-wrapper">
 				<!--Creating the navigation wrapper-->
 				<div class="nav-wrapper">
 					<!--Links that lead to different webpages-->
-					<a href="index.html">
+					<a>
 						<!--Dots wrapper-->
 						<div class="dots-wrapper">
 							<!--Creating the red, green and yellow dots, list-->
@@ -83,17 +77,23 @@
 
 				<!--Creating the left column side-->
 				<div class="left-column">
-					<img id="profile_pic" src="images/logo.jpg">
+					<img id="profile_pic" src="src/images/logo.jpg">
 					<!--Creating the choose a theme title-->
 					<h5 id="personalizeTheme" style="text-align: center;line-height: 0;">Personalize Theme</h5>
 					<!--Creating the buttons for each color theme picker, different modes-->
-					<div id="theme-options-wrapper">
-						<div data-mode="light" id="light-mode" class="theme-dot"></div>
-						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-						<div data-mode="green" id="green-mode" class="theme-dot"></div>
-						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-						<div data-mode="dark" id="dark-mode" class="theme-dot"></div>
-					</div>
+					<div class="theme-options-wrapper">
+						<input type="checkbox" id="switch" class="checkbox"/>
+						<label for="switch" class="toggle" id="toggle">				
+						</label>
+						<br><br>
+						<div class="theme-options-wrapper" id="hidden-modes" style="display: none;">
+							<div data-mode="light" id="light-mode" class="theme-dot"></div>
+							<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+							<div data-mode="green" id="green-mode" class="theme-dot"></div>
+							<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+							<div data-mode="dark" id="dark-mode" class="theme-dot"></div>
+						</div>
+						</div>
 					<!--Creating the note for theme settings-->
 					<p id="settings-note">*Theme settings will be saved while<br>the website is open!<br></p>
 				</div>
@@ -127,17 +127,17 @@
 					<!--More about me text-->
 					<h4 id="moreAboutMe">MORE ABOUT ME</h4>
 
-					<p id="moreAboutMeText">I enjoy taking on new projects that will challenge me, as well as learning new skills and broadening my knowledge on programming.
+					<p id="moreAboutMeText">I enjoy taking on new projects that will challenge me, as well as acquiring new skills and broadening my programming expertise.
 					<br><br>
 					Aside from learning HTML, CSS and JavaScript. I am learning Python. The sphere on the right or bottom, contain all the languages I am currently interested in learning.</p>
 					<hr>
 					<h4 id="topExpertise">TOP EXPERTISE</h4>
-
-					<p id="primaryFocus">Primary Focus: Python | <a href="404.html">Download Resume</a></p>
-
 					<!--Skils list-->
 					<div id="skills">
-						<ul>
+						<p id="primaryFocus">Primary Focus: Python | <a style="color: grey; text-decoration: line-through;" href="404.html">Download Resume</a></p>
+
+						
+						<!--<ul>
 							<li>Python</li>
 							<li>JavaScript</li>
 						</ul>
@@ -145,7 +145,7 @@
 						<ul>
 							<li>Heroku</li>
 							<li>HTML/CSS</li>
-						</ul>
+						</ul>-->
 
 					</div>
 
@@ -205,15 +205,16 @@
 				<!--Post 1-->
 				<div>
 					<div class="post" id="post-1">
-						<img class="thumbnail" src="images/index-project-icons/User_Interface.png">
+						<img class="thumbnail" src="src/images/index-project-icons/User_Interface.png">
 						<div class="post-preview">
 							<h6 class="post-title">UI Designs</h6>
 							<p class="post-intro">I've started creating prototype UI's for fun, these are mainly mobile app designs</p>
 							<a href="projects.html">Read More</a>
 						</div>
 					</div>
+					
+					<p style="text-align: center;">Please make sure to check out the image | <a href="src/html/credits.html">Credits Page</a></p>
 				</div>
-
 				<!--Post 2
 				<div>
 					<div class="post" id="post-2">
@@ -237,11 +238,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-			<center><p>Please make sure to check out the image | <a href="credits.html">Credits Page</a></p></center>
-
-	-->
-
+		</div>-->
 		<!--Creating the image credit area-->
 	</section>
 
@@ -305,7 +302,7 @@
 
 	<!--Creating the copyright footer-->
 	<div class="footer">
-		<footer-text>Copyright @ Neel Bansal 2021-2022. <a href="credits.html">Credits Page.</a></footer-text>
+		<footer-text>Copyright @ Neel Bansal 2021-2022. <a href="src/html/credits.html">Credits Page.</a></footer-text>
 	</div>
 </div>
 

@@ -2,21 +2,25 @@
 <html lang="en">
   <head>
     <!--Setting the main title-->
-    <title>3D Projects</title>
+    <title>Projects | Neel Bansal</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
+    
+    <!-- Adding the Favicon -->
+	<link rel="icon" type="image/png" href="src/images/favicon.png"/>
+
     <!--Linking Internal/Local CSS-->
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/mouse.css">
-    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/projects.css">
+    <link rel="stylesheet" href="src/css/mouse.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 
     <!--Linking Internal/Local Javascript-->
-    <script src="js/vanilla-tilt.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+    <script src="src/js/constants.js"></script>
+    <script src="src/js/vanilla-tilt.js"></script>
       
     <!--Linking External Javascript-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -44,11 +48,11 @@
     <!--Creating the navigation wrapper-->
     <div class="nav-wrapper">
 		<!--Links that lead to different webpages-->
-		<a href="index.html">
+		<a>
 			<!--Dots wrapper-->
             <div class="dots-wrapper">
 				<!--Creating the red, green and yellow dots, list-->
-                <div id="dot-1" class="browser-dot"></div>
+                <div onclick="javascript:window.location='index.html';"href="index.html" id="dot-1" class="browser-dot"></div>
 				<div id="dot-2" class="browser-dot"></div>
 				<div id="dot-3" class="browser-dot"></div>
 			</div>
@@ -69,55 +73,55 @@
         <!--Creating each project showcase-->
         <div class="box">
             <h2 class="name">Instagram UI Clone</h2>
-            <a href="images/projects/slideshow/Instagram Clone.png"class="popupimage">Closer Look</a>
+            <a href="src/images/projects/slideshow/Instagram Clone.png"class="popupimage">Closer Look</a>
             <div class="circle"></div>
-            <img width="100" height="190" src="images/projects/main-icons/instagram_clone.png" class="product">
+            <img width="100" height="190" src="src/images/projects/main-icons/instagram_clone.png" class="product">
         </div>
         <div class="box">
             <h2 class="name">Travel Agent UI</h2>
-            <a href="images/projects/slideshow/TravelAgent.png"class="popupimage">Closer Look</a>
+            <a href="src/images/projects/slideshow/TravelAgent.png"class="popupimage">Closer Look</a>
             <div class="circle"></div>
-            <img width="100" height="190" src="images/projects/main-icons/travel-guide.png" class="product">
+            <img width="100" height="190" src="src/images/projects/main-icons/travel-guide.png" class="product">
         </div>
         <div class="box">
             <h2 class="name">Banking Account UI</h2>
-            <a href="images/projects/slideshow/BankingApp.png"class="popupimage">Closer Look</a>
+            <a href="src/images/projects/slideshow/BankingApp.png"class="popupimage">Closer Look</a>
             <div class="circle"></div>
-            <img width="100" height="190" src="images/projects/main-icons/banking-app.png" class="product">
+            <img width="100" height="190" src="src/images/projects/main-icons/banking-app.png" class="product">
         </div>
         <div class="box">
             <h2 class="name">Music App UI</h2>
-            <a href="images/projects/slideshow/MusicApp.png"class="popupimage">Closer Look</a>
+            <a href="src/images/projects/slideshow/MusicApp.png"class="popupimage">Closer Look</a>
             <div class="circle"></div>
-            <img width="100" height="190" src="images/projects/main-icons/music-app.png" class="product">
+            <img width="100" height="190" src="src/images/projects/main-icons/music-app.png" class="product">
         </div>
         <div class="box">
             <h2 class="name">Simple JS Calculation</h2>
             <a target="_blank" href="https://npx2218.github.io/Simple-JS-Calculator/" class="buy">Closer Look</a>
             <div class="circle"></div>
-            <img width="200" height="190" src="images/projects/main-icons/simple-calc.png" class="product">
+            <img width="200" height="190" src="src/images/projects/main-icons/simple-calc.png" class="product">
         </div>
         <div class="box">
             <h2 class="name">Simple JS Stopwatch</h2>
             <a target="_blank" href="https://npx2218.github.io/Simple-JS-Stopwatch/" class="buy">Closer Look</a>
             <div class="circle"></div>
-            <img width="100" height="190" src="images/projects/main-icons/simple-stopwatch.png" class="product">
+            <img width="100" height="190" src="src/images/projects/main-icons/simple-stopwatch.png" class="product">
         </div>
         <div class="box">
             <h2 style="font-size: 21px;" class="name">Password Strength Checker</h2>
             <a target="_blank" href="https://npx2218.github.io/Password-Strength-Checker/" class="buy">Closer Look</a>
             <div class="circle"></div>
-            <img width="100" height="190" src="images/projects/main-icons/password-strength.png" class="product">
+            <img width="100" height="190" src="src/images/projects/main-icons/password-strength.png" class="product">
         </div>
         <div class="box">
             <h2 style="font-size: 21px;" class="name">To-Do List Extension</h2>
             <a target="_blank" href="https://chrome.google.com/webstore/detail/to-do-list-alox/pihmhlfkgolnefboifbhckeoojfpbkcc?hl=en&authuser=0/" class="buy">Closer Look</a>
             <div class="circle"></div>
-            <img width="130" height="130" src="images/projects/main-icons/todolist-extension.png" class="product">
+            <img width="130" height="130" src="src/images/projects/main-icons/todolist-extension.png" class="product">
         </div>
     </div>
     
-    <script type="text/javascript" src="js/popup-image.js"></script>
+    <script type="text/javascript" src="src/js/popup-image.js"></script>
     <!--<div class="animated-text">
         <div class="line">Copyright</div>
         <div class="line">Belongs</div>
@@ -135,7 +139,13 @@
         max: 25,
         speed: 400
 	});
-    </script>
-    <script src="script.js"></script>
-</body>
+
+    let theme = sessionStorage.getItem('theme');
+    if(theme == null){
+		setTheme('light')
+	}else{
+		setTheme(theme)
+	}
+</script>
+    </body>
 </html>

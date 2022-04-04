@@ -4,15 +4,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/404.css"/>
-    <link id="theme-style" rel="stylesheet" type="text/css" href="">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" href="css/mouse.css">
-    
-
 	<title>404 Error</title>
+
+	<!-- Adding the Favicon -->
+	<link rel="icon" type="image/png" href="src/images/favicon.png"/>
+
+	<!--Linking Internal/Local CSS-->
+	<link type="text/css" rel="stylesheet" href="src/css/404.css"/>
+	<link type="text/css" rel="stylesheet" href="src/css/mouse.css">
+    <link type="text/css" id="theme-style" rel="stylesheet" href="">
+	
+	<!--Linking Internal/Local JS-->
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+	<script src="src/js/constants.js"></script>
 </head>
 <body>
     <!--Creating a Custom Cursor-->
@@ -31,5 +35,15 @@
 			<a href="index.html">home page</a>
 		</div>
 	</div>
+
+	<script>
+    let theme = sessionStorage.getItem('theme');
+    if(theme == null){
+		setTheme('light')
+	}else{
+		setTheme(theme)
+	}
+</script>
+
 </body>
 </html>

@@ -9,13 +9,32 @@ $(window).ready(function(){
 	/////////////////////////////////////////
 
 	//let theme = localStorage.getItem('theme')
+	let profileImage = document.getElementById('profile_pic')
+	let hiddenMode = document.getElementById('hidden-modes')
 	let theme = sessionStorage.getItem('theme')
-
+	let toggle = document.getElementById('toggle')
+	let personalizeText = document.getElementById('personalizeTheme')
 	if(theme == null){
 		setTheme('light')
 	}else{
 		setTheme(theme)
 	}
+
+	profileImage.addEventListener('click', function(){
+		hiddenMode.style.display = "flex";
+		personalizeText.innerHTML = "(Secret) Personalize Theme"
+		toggle.style.display = "none";
+		checkBox.style.display = "none";
+	})
+
+	checkBox.addEventListener('click', function(){
+		if(checkBox.checked){
+			setTheme('dark')
+
+		}else{
+			setTheme('light')
+		}
+		})
 
 	let themeDots = document.getElementsByClassName('theme-dot')
 
@@ -26,60 +45,4 @@ $(window).ready(function(){
 			setTheme(mode)
 		})
 	}
-
-	/////////////////////////////////////////
-	//Creating the setTheme function, which sets the theme, and also creating the outerColorCursor Color
-	/////////////////////////////////////////
-	function setTheme(mode){
-		
-		if(mode == 'light'){
-			document.getElementById('theme-style').href = 'default.css'
-			outerColorCursor = "#0f1928";
-		}
-
-		if(mode == 'blue'){
-			document.getElementById('theme-style').href = 'css/themes/blue.css'
-			outerColorCursor = "#fff";
-		}
-
-		if(mode == 'green'){
-			document.getElementById('theme-style').href = 'css/themes/green.css'
-			outerColorCursor = "#fff";
-		}
-
-		if(mode == 'purple'){
-			document.getElementById('theme-style').href = 'css/themes/purple.css'
-			outerColorCursor = "#fff";
-		}
-
-		if(mode == 'dark'){
-			document.getElementById('theme-style').href = 'css/themes/dark.css'
-			outerColorCursor = "#fff";
-		}
-		sessionStorage.setItem('theme', mode);
-		//localStorage.setItem('theme', mode)
-	}
-
-
-	/////////////////////////////////////////
-	//Movement for custom cursor
-	/////////////////////////////////////////
-		let mouseX = 0;
-		let mouseY = 0;
-		let xp = 0;
-		let yp = 0;
-		$(document).mousemove(function(e){
-		$(".custom__cursor__inner").css({
-			transform: 'translate(' + (e.clientX - 3.25) + 'px, ' + (e.clientY - 3.25) + 'px)'
-		});
-
-		mouseX = e.clientX - 10;
-		mouseY = e.clientY - 10;
-		});
-
-		setInterval(function(){
-		xp += ((mouseX - xp));
-		yp += ((mouseY - yp));
-		$(".custom__cursor__outer").css({transform: 'translateX('+ (xp - 15) +'px) translateY('+ (yp - 15) +'px)'}).css({border: '1px solid ' + outerColorCursor})
-		}, 10);
-		})
+})

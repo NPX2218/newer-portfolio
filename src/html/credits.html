@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../default.css">
+    <title>Credits | Neel Bansal</title>
+
+    <!-- Adding the Favicon -->
+	<link rel="icon" type="image/png" href="../images/favicon.png"/>
+
+    <!--Linking Internal/Local CSS-->
+    <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/mouse.css">
 	<link rel="stylesheet" type="text/css" href="../css/scrollbar.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 
+    <!--Linking Internal/Local JS-->
     <script src="../js/jquery.js"></script>
-    <script src="../script.js"></script>
-    <link id="theme-style" rel="stylesheet" type="text/css" href="">
-
-    <title>Document</title>
+    <script src="../js/constants.js"></script>
 </head>
 <body>
         <!--Creating a Custom Cursor3-->
@@ -25,11 +29,11 @@
         <!--Creating the navigation wrapper-->
         <div class="nav-wrapper">
             <!--Links that lead to different webpages-->
-            <a href="../index.html">
+            <a>
                 <!--Dots wrapper-->
                 <div class="dots-wrapper">
                     <!--Creating the red, green and yellow dots, list-->
-                    <div id="dot-1" class="browser-dot"></div>
+                    <div onclick="javascript: window.location ='../../index.html';" id="dot-1" class="browser-dot"></div>
                     <div id="dot-2" class="browser-dot"></div>
                     <div id="dot-3" class="browser-dot"></div>
                 </div>
@@ -55,10 +59,10 @@
         <br>
         UI Designs<br>
         <a href="https://www.instagram.com/">Instagram Logo</a>
+        <!--<a href="https://www.getwox.com/windows-10-vs-windows-8-1/">UI Image</a>
         <a href="https://www.getwox.com/windows-10-vs-windows-8-1/">UI Image</a>
         <a href="https://www.getwox.com/windows-10-vs-windows-8-1/">UI Image</a>
-        <a href="https://www.getwox.com/windows-10-vs-windows-8-1/">UI Image</a>
-        <a href="https://www.getwox.com/windows-10-vs-windows-8-1/">UI Image</a>
+        <a href="https://www.getwox.com/windows-10-vs-windows-8-1/">UI Image</a>-->
         <br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br>
@@ -68,5 +72,14 @@
     </p>
     </div>
 </section>
+<script>
+
+    let theme = sessionStorage.getItem('theme');
+    if(theme == null){
+		setTheme('light', "../css/")
+	}else{
+		setTheme(theme, "../css/")
+	}
+</script>
 </body>
 </html>

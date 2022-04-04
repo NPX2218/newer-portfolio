@@ -1,5 +1,6 @@
-/*     Importing Google fonts    */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap');
 
 /*Creating global variables, for colors
 this can be used for any thing*/
@@ -277,8 +278,9 @@ column, and adding padding*/
   transform: scale(1.1);
 }
 
-#theme-options-wrapper {
+.theme-options-wrapper{
   display: flex;
+  flex-direction: row; 
   justify-content: center;
 }
 
@@ -612,4 +614,123 @@ footer-text {
 ::selection {
   background-color: var(--borderColor);
   color: #ffffff;
+}
+
+
+/**/
+
+    /* toggle in label designing */
+    .toggle {
+        position : relative ;
+        display : inline-block;
+        width : 100px;
+        height : 38px;
+        background-color: white;
+        border-radius: 30px;
+        border: 2px solid var(--borderColor);
+    }
+            
+    /* After slide changes */
+    .toggle:after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: var(--borderColor);
+          top: 2px; 
+          left: 3px;
+        transition:all 0.5s;
+    }
+            
+    /* Toggle text */
+    p {
+      font-weight: bold;
+    }
+            
+    /* Checkbox checked effect */
+    .checkbox:checked + .toggle::after {
+        left : 62px; 
+    }
+            
+    /* Checkbox checked toggle label bg color */
+    .checkbox:checked + .toggle {
+        background-color: black;
+    }
+            
+    /* Checkbox vanished */
+    .checkbox { 
+        display : none;
+    }
+
+/*Special Social Media Icons*/
+
+.fa {
+  padding: 30px 30px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 250px;
+  border-radius: 20%;
+}
+.fa:hover {
+  transition: all 2s ease;
+  opacity: 0.7;
+}
+
+.fa:not(:hover) {
+  transition: all 2s ease;
+  opacity: 1;
+}
+
+.fa-facebook {
+  display: inline-block;
+  margin: 0;
+  background: #3b5998;
+  color: white;
+}
+.fa-twitter {
+  display: inline-block;
+  margin: 0;
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  display: inline-block;
+  margin: 0;
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: white;
+}
+.social-wrapper {
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  right: 50%;
+  text-align: center;
+  overflow-x: auto;
 }
